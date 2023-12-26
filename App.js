@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, ScrollView } from "react-native";
 
 const App = () => {
   return (
@@ -6,12 +6,24 @@ const App = () => {
       <View style={styles.city}>
         <Text style={styles.cityName}>서울</Text>
       </View>
-      <View style={styles.weather}>
+      <ScrollView horizontal contentContainerStyle={styles.weather}>
         <View style={styles.day}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
-      </View>
+        <View style={styles.day}>
+          <Text style={styles.temp}>27</Text>
+          <Text style={styles.desc}>Sunny</Text>
+        </View>
+        <View style={styles.day}>
+          <Text style={styles.temp}>27</Text>
+          <Text style={styles.desc}>Sunny</Text>
+        </View>
+        <View style={styles.day}>
+          <Text style={styles.temp}>27</Text>
+          <Text style={styles.desc}>Sunny</Text>
+        </View>
+      </ScrollView>
     </View>
   );
 };
@@ -22,7 +34,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#f6d38c",
   },
   city: {
-    flex: 1,
+    flex: 1.2,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -30,12 +42,8 @@ const styles = StyleSheet.create({
     fontSize: 68,
     fontWeight: 600,
   },
-  weather: {
-    flex: 3,
-  },
+  weather: {},
   day: {
-    backgroundColor: "teal",
-    flex: 1,
     alignItems: "center",
   },
   temp: {
