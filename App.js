@@ -10,23 +10,22 @@ const App = () => {
       <ScrollView
         pagingEnabled
         horizontal
-        indicatorStyle="white"
-        // showsHorizontalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.weather}
       >
         <View style={{ width: SCREEN_WIDTH, alignItems: "center" }}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
-        <View style={(styles.day, { width: SCREEN_WIDTH })}>
+        <View style={{ width: SCREEN_WIDTH, alignItems: "center" }}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
-        <View style={(styles.day, { width: SCREEN_WIDTH })}>
+        <View style={{ width: SCREEN_WIDTH, alignItems: "center" }}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
-        <View style={(styles.day, { width: SCREEN_WIDTH })}>
+        <View style={{ width: SCREEN_WIDTH, alignItems: "center" }}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
@@ -50,9 +49,7 @@ const styles = StyleSheet.create({
     fontWeight: 600,
   },
   weather: {},
-  day: {
-    alignItems: "center",
-  },
+  day: {},
   temp: {
     fontSize: 178,
     marginTop: 50,
