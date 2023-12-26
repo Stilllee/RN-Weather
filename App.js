@@ -1,25 +1,26 @@
-import { StyleSheet, View, Text, ScrollView } from "react-native";
+import { StyleSheet, View, Text, ScrollView, Dimensions } from "react-native";
 
 const App = () => {
+  const { width: SCREEN_WIDTH } = Dimensions.get("window");
   return (
     <View style={styles.container}>
       <View style={styles.city}>
         <Text style={styles.cityName}>서울</Text>
       </View>
       <ScrollView horizontal contentContainerStyle={styles.weather}>
-        <View style={styles.day}>
+        <View style={{ width: SCREEN_WIDTH, alignItems: "center" }}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
-        <View style={styles.day}>
+        <View style={(styles.day, { width: SCREEN_WIDTH })}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
-        <View style={styles.day}>
+        <View style={(styles.day, { width: SCREEN_WIDTH })}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
-        <View style={styles.day}>
+        <View style={(styles.day, { width: SCREEN_WIDTH })}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
