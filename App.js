@@ -10,7 +10,8 @@ const App = () => {
       <ScrollView
         pagingEnabled
         horizontal
-        showsHorizontalScrollIndicator={false}
+        indicatorStyle="white"
+        // showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.weather}
       >
         <View style={{ width: SCREEN_WIDTH, alignItems: "center" }}>
