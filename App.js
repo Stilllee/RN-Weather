@@ -7,7 +7,11 @@ const App = () => {
       <View style={styles.city}>
         <Text style={styles.cityName}>서울</Text>
       </View>
-      <ScrollView horizontal contentContainerStyle={styles.weather}>
+      <ScrollView
+        pagingEnabled
+        horizontal
+        contentContainerStyle={styles.weather}
+      >
         <View style={{ width: SCREEN_WIDTH, alignItems: "center" }}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
