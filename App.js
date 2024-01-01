@@ -1,7 +1,8 @@
 import { StyleSheet, View, Text, ScrollView, Dimensions } from "react-native";
 
+const { width: SCREEN_WIDTH } = Dimensions.get("window");
+
 const App = () => {
-  const { width: SCREEN_WIDTH } = Dimensions.get("window");
   return (
     <View style={styles.container}>
       <View style={styles.city}>
@@ -13,19 +14,19 @@ const App = () => {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.weather}
       >
-        <View style={{ width: SCREEN_WIDTH, alignItems: "center" }}>
+        <View style={styles.day}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
-        <View style={{ width: SCREEN_WIDTH, alignItems: "center" }}>
+        <View style={styles.day}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
-        <View style={{ width: SCREEN_WIDTH, alignItems: "center" }}>
+        <View style={styles.day}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
-        <View style={{ width: SCREEN_WIDTH, alignItems: "center" }}>
+        <View style={styles.day}>
           <Text style={styles.temp}>27</Text>
           <Text style={styles.desc}>Sunny</Text>
         </View>
@@ -49,7 +50,10 @@ const styles = StyleSheet.create({
     fontWeight: 600,
   },
   weather: {},
-  day: {},
+  day: {
+    width: SCREEN_WIDTH,
+    alignItems: "center",
+  },
   temp: {
     fontSize: 178,
     marginTop: 50,
