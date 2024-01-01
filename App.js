@@ -8,7 +8,7 @@ const App = () => {
   const [city, setCity] = useState("불러오는 중..");
   const [location, setLocation] = useState();
   const [ok, setOk] = useState(true);
-  const ask = async () => {
+  const getWeather = async () => {
     const { granted } = await Location.requestForegroundPermissionsAsync();
     if (!granted) {
       setOk(false);
@@ -26,7 +26,7 @@ const App = () => {
     setCity(location[0].city);
   };
   useEffect(() => {
-    ask();
+    getWeather();
   }, []);
   return (
     <View style={styles.container}>
