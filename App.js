@@ -6,7 +6,6 @@ const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 const App = () => {
   const [city, setCity] = useState("불러오는 중..");
-  const [location, setLocation] = useState();
   const [ok, setOk] = useState(true);
   const getWeather = async () => {
     const { granted } = await Location.requestForegroundPermissionsAsync();
